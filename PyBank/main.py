@@ -101,6 +101,6 @@ with open(output_analysis, 'w', newline='') as txtfile:
     txtfile.write(total_line + "\n")
     txtfile.write(average_change_line + "\n")
     txtfile.write(greatest_increase_line + "\n")
-    txtfile.write(greatest_decrease_line + "\n")
+    txtfile.write(greatest_decrease_line)
 
     txtfile.close()
