@@ -23,7 +23,7 @@ with open(budget_data_csv, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
  
     # Skip header row
-    next(csvreader)
+    header = next(csvreader)
 
     # Loop through the data
     for row in csvreader:
