@@ -15,6 +15,7 @@ def print_candidate_stats(name, votes, total_votes):
 #Initialize variables
 total_votes = 0
 candidates = {}
+winner_votes = 0
 
 with open(election_data_csv, 'r') as csvfile:
 
@@ -47,7 +48,13 @@ print(break_line)
 print(total_line)
 print(break_line)
 for candidate in candidates:
-    print_candidate_stats(candidate, candidates[candidate], total_votes)
-    # winner = candidate
-    #     if 
+    votes = candidates[candidate]
+    print_candidate_stats(candidate, votes, total_votes)
+    if votes > winner_votes:
+        winner = candidate
+        winner_votes = votes
+        winner_line = f"Winner: {winner}"
+
+print(break_line)
+print(winner_line)
 print(break_line)
